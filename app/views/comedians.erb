@@ -1,0 +1,25 @@
+<article>
+  <% comedians.each do |comedian| %>
+    <section id='comedian-<%= comedian.id %>-block'>
+      <div class="comedian-block">
+        <div id='comedian-<%= comedian.id %>-info' class="comedian-info">
+          <img src="<%= comedian.thumb_path %>" class="comedian-image" width="160" height="120"/><br />
+          <h2><%= comedian.name %></h2><br />
+          <span class="details">
+            Hometown: <%= comedian.birth_location %><br />
+            Age: <%= comedian.age %>
+          </span>
+        </div>
+        <div id='comedian-<%= comedian.id %>-specials' class="specials-block">
+          <% comedian.specials.each do |special|%>
+          <div id='special-<%= comedian.id.to_s + special.id.to_s %>' class="special">
+            <img src="<%= special.thumb_path %>"  class="comedian_image" width="120" height="160"><br />
+            <%= special.title %><br />
+            <span class="details">Run time: <%= special.run_time %> min.</span>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </section>
+  <% end %>
+</article>

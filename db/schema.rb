@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 2018_10_04_174704) do
 
   create_table "comedians", force: :cascade do |t|
     t.text "name"
-    t.text "birth_date"
-    t.text "birth_location"
     t.text "thumb_path"
+    t.text "birth_location"
+    t.integer "birthday_timestamp"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2018_10_04_174704) do
     t.text "title"
     t.text "thumb_path"
     t.integer "run_time"
+    t.integer "comedian_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

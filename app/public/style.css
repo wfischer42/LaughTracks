@@ -1,0 +1,50 @@
+body {
+  background: linear-gradient(to right, 
+  rgba(220,220,220) 0%,
+  rgba(255,255,255,1) 15%,
+  rgba(255,255,255,1) 85%,
+  rgba(220,220,220) 100%
+  );
+  font-family: sans-serif;
+}
+article {
+  display: grid;
+  grid-template: repeat(auto-fill, 580px) / 1fr 1fr;
+  width: 80%;
+  margin: 0 auto 0 auto;
+}
+
+.comedian-block {
+  border-radius: 15px;
+  padding: 10px;
+/*   border: thin black solid; */
+  margin: 15px;
+  box-shadow: 3px 3px 20px grey;
+
+}
+
+.comedian-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.comedian-image {
+  border-radius: 10px;
+}
+
+.specials-block {
+  display: flex;
+}
+
+.special {
+  margin: 10px;
+}
+
+.details {
+  font-size: small;
+  font-style: italic;
+  font-weight: 100;
+  float: left;
+}
