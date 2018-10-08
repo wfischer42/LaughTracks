@@ -1,11 +1,13 @@
 require './app/models/comedian'
 require './app/models/special'
 
-# TODO: Clean out seed file
+# TODO: Change locations to cities
 
 b_day = Date.parse('June 2, 1958').to_time.to_i
 comedian = Comedian.create(name:"Brian Regan",birthday_timestamp: b_day, birth_location: "Florida", thumb_path: "https://comedycentral.mtvnimages.com/images/ccstandup/comedians/800x600/brian_regan_800x600.jpg")
 comedian.specials.create(title: 'Live from Radio City Music Hall', run_time: 57, thumb_path: 'https://m.media-amazon.com/images/M/MV5BMTcyNTgzNjU5NF5BMl5BanBnXkFtZTgwNzcwMTIwOTE@._V1_.jpg')
+comedian.specials.create(title: 'Live from Radio City Music Hall', run_time: 57, thumb_path: 'https://m.media-amazon.com/images/M/MV5BMTcyNTgzNjU5NF5BMl5BanBnXkFtZTgwNzcwMTIwOTE@._V1_.jpg')
+comedian.specials.create(title: 'The Epitome of Hyperbole', run_time: 60, thumb_path: 'https://m.media-amazon.com/images/M/MV5BMTc1MjcxMTY0Ml5BMl5BanBnXkFtZTgwMjk3MjA2MDE@._V1_.jpg')
 comedian.specials.create(title: 'The Epitome of Hyperbole', run_time: 60, thumb_path: 'https://m.media-amazon.com/images/M/MV5BMTc1MjcxMTY0Ml5BMl5BanBnXkFtZTgwMjk3MjA2MDE@._V1_.jpg')
 
 b_day = Date.parse('February 4, 1983').to_time.to_i
@@ -29,9 +31,9 @@ comedian.specials.create(title: 'The Overthinker', run_time: 60, thumb_path: 'ht
 comedian.specials.create(title: 'Live (At the Time)', run_time: 61, thumb_path: 'https://m.media-amazon.com/images/M/MV5BNjQ4NTQ2NzE1N15BMl5BanBnXkFtZTgwODc4ODA3NjE@._V1_SY1000_SX675_AL_.jpg')
 
 
-b_day = Date.parse('March 26, 1974').to_time.to_i
-comedian = Comedian.create(name: 'Ali Wong', birthday_timestamp: b_day, birth_location: 'Illinois', thumb_path:
-'https://comedycentral.mtvnimages.com/images/ccstandup/comedians/800x600/Natasha-Leggero-2014_800x600.jpg')
+b_day = Date.parse('April 19, 1982').to_time.to_i
+comedian = Comedian.create(name: 'Ali Wong', birthday_timestamp: b_day, birth_location: 'California', thumb_path:
+'https://d2pu2bk1b66iw6.cloudfront.net/photos/2017/04/25/150-165953-ali-wong-1493160776.jpg')
 comedian.specials.create(title: 'Hard Knock Wife', run_time: 64, thumb_path: 'https://m.media-amazon.com/images/M/MV5BMWVkZDNjZTMtMTY0Yi00OGQ0LTliMDEtMWMxYzljYzZlYTY3XkEyXkFqcGdeQXVyMTEzNjA2NzM@._V1_.jpg')
 comedian.specials.create(title: 'Baby Cobra', run_time: 60, thumb_path: 'https://m.media-amazon.com/images/M/MV5BOWZmODIxMDEtZGY1My00OGEyLWE3NTQtN2Y4MTFkMzdlMTc4XkEyXkFqcGdeQXVyNjcwNDI1MDk@._V1_.jpg')
 

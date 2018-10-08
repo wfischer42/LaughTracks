@@ -1,25 +1,66 @@
 <article>
-  <% comedians.each do |comedian| %>
-    <section id='comedian-<%= comedian.id %>-block'>
-      <div class="comedian-block">
-        <div id='comedian-<%= comedian.id %>-info' class="comedian-info">
-          <img src="<%= comedian.thumb_path %>" class="comedian-image" width="160" height="120"/><br />
-          <h2><%= comedian.name %></h2><br />
-          <span class="details">
-            Hometown: <%= comedian.birth_location %><br />
-            Age: <%= comedian.age %>
-          </span>
+  <div class="left-margin">
+  </div>
+  <div class="right-margin">
+  </div>
+  <% if comedians %>
+    <section>
+      <div class="comedian-block" id='stats-card'>
+        <div class="comedian-info">
+          <img src="https://afterhills.com/images/microphone_stage_background-1280x841.jpg"
+            class="comedian-image" width="160" height="120"/>
+          <h2 class="comedian-name">About the Comics</h2>
+          <h3 class="details">and their shows</h3>
         </div>
-        <div id='comedian-<%= comedian.id %>-specials' class="specials-block">
-          <% comedian.specials.each do |special|%>
-          <div id='special-<%= comedian.id.to_s + special.id.to_s %>' class="special">
-            <img src="<%= special.thumb_path %>"  class="comedian_image" width="120" height="160"><br />
-            <%= special.title %><br />
-            <span class="details">Run time: <%= special.run_time %> min.</span>
+        <div class='header-statistics-block'>
+          <div class='special-heading'>Statistics</div>
+          <div class='header-statistics'>
+            <%= stats[:total_specials] %><br />
+            <%= stats[:avg_runtime] %> minutes<br />
+            <%= stats[:avg_age] %> years<br />
           </div>
-          <% end %>
+          <div class='header-statistics-labels'>
+            Total Specials<br />
+            Average Runtime<br />
+            Average Comic Age<br />
+          </div>
+        </div>
+        <div class='header-statistics-block header-locations-block'>
+          <div class='special-heading'>States</div>
+          <div class='locations'>
+            <%= stats[:locations].join(', ') %>
+          </div>
         </div>
       </div>
     </section>
+    <% comedians.each do |comedian| %>
+      <section id='comedian-<%= comedian.id %>-block'>
+        <div class="comedian-block">
+          <div id='comedian-<%= comedian.id %>-info' class="comedian-info">
+            <img src="<%= comedian.thumb_path %>" class="comedian-image" width="160" height="120"/>
+            <h2 class="comedian-name"><%= comedian.name %></h2>
+            <h3 class="details">
+              <%= comedian.age %> years old, from <%= comedian.birth_location %>
+            </h3>
+          </div>
+          <h2 class = 'special-heading'> Comedy Specials: <%= comedian.specials.length %> </h2>
+          <div id='comedian-<%= comedian.id %>-specials' class="specials-block">
+            <div class='specials-scroll-box'>
+              <% comedian.specials.each do |special|%>
+                <div id='special-<%= comedian.id.to_s + special.id.to_s %>' class="special">
+                  <img src="<%= special.thumb_path %>" class="special-image" width="110" height="160">
+                  <div class='special-title'>
+                    <%= special.title %>
+                  </div>
+                  <div class='special-details'>
+                    Run time: <%= special.run_time %> min.
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </section>
+    <% end %>
   <% end %>
 </article>
