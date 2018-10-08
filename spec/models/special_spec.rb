@@ -1,3 +1,5 @@
+# require './app/models/special'
+
 RSpec.describe Special do
   describe 'Validation:' do
     describe 'invalid if' do

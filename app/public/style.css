@@ -1,0 +1,211 @@
+body {
+  background: linear-gradient(to right, 
+  rgba(220,220,220,.8) 0%,
+  rgba(255,255,255,1) 10%,
+  rgba(255,255,255,1) 90%,
+  rgba(220,220,220, .8) 100%);
+  font-family: sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #353535;
+  display: block;
+  width: 100%;
+  height: 150px;
+  margin: 0 0 30px 0;
+  padding: 0px;
+}
+
+article {
+  display: grid;
+  grid-template: repeat(auto-fill, 620px) / 1fr 350px 350px 1fr;
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+
+#stats-card{
+  width: 320px;
+  height: 580px;
+  margin: 15px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 20px grey;
+}
+
+.header-content-block {
+  font-size: large;
+  color: white;
+  width: 650px;
+  height: 140px;
+  margin: 0 auto 0 auto;
+  border: 10px white solid;
+}
+
+.header-title-block {
+  float: left;
+  width: 150px;
+  border-right: white thick solid;
+  margin-top: 4px;
+}
+
+.header-statistics-block{
+  padding: 0 50px 0 50px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: small;
+  font-weight: 200;
+  height: 80px;
+}
+
+.header-locations-block{
+  width: 170px;
+  height: 120px;
+  text-align: center;
+}
+
+.header-statistics-block h2{
+  text-align: center;
+}
+
+.header-statistics {
+  float: right;
+  width: 70px;
+}
+
+.header-statistics-labels{
+  float: left;
+  text-align: right;
+  font-weight: 400;
+  border-right: thin white solid;
+  padding-right: 10px
+}
+
+
+.header-title-block h1{
+  margin: 5px 0 0 15px;
+}
+
+.comedian-block {
+  background-color: white;
+  border-radius: 15px;
+  margin: 15px;
+  box-shadow: 3px 3px 20px grey;
+}
+
+.left-margin{
+  grid-column: 1;
+  grid-row: 1 / 100;
+}
+
+.right-margin{
+  grid-column: 4;
+  grid-row: 1 / 100;
+}
+
+.comedian-info {
+  width: 100%;
+  height: 315px;
+  background-color: #f3f3f3f2;
+  border-radius: 15px 15px 0 0 ;
+/*   display: flex; */
+}
+
+.comedian-image {
+  margin: 0;
+  border-radius: 15px 15px 0 0;
+/*   border: thin #8080801a solid; */
+  width: 320px;
+  height: 240px;
+}
+
+.comedian-name {
+  padding: 5px 15px 5px 15px;
+  margin: 0;
+  text-align: center
+}
+
+.specials-block {
+  justify-content: space-evenly;
+  height: 225px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+  margin: 0 35px 0 35px;
+}
+
+.specials-scroll-box {
+  display: flex;
+  width: 100%;
+}
+
+.special {
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  white-space:normal;
+  width: 130px;
+  margin: 0 30px 0 0;
+}
+
+.special-title{
+  font-size: smaller;
+  font-weight: bolder;
+  text-align:center;
+  padding: 5px 0 5px 0;
+}
+
+.special-heading{
+  text-align: center;
+  font-size: medium;
+  font-weight: 300;
+  color: #525252;
+  margin: 10px 0 10px 0;
+}
+
+.special-image{
+  border-radius: 15px;
+}
+
+.special-details {
+  font-size: small;
+  font-style: italic;
+  font-weight: 100;
+  float: left;
+}
+
+.details {
+  text-align: center;
+  font-size: small;
+  font-weight: 100;
+  margin: 5px 0 0 0;
+}
+
+.new-comedian-block {
+  text-align: center;
+  width: 322px;
+  margin: 0 auto 0 auto;
+}
+
+.submit {
+  background-color: #353535;
+  color: white;
+  transition: .3s;
+  width: 322px;
+  height: 32px;  
+}
+
+.submit:hover {
+  background-color: #35353526;
+  color: #353535;  
+}
+
+input {
+  outline: none;
+  width: 310px;
+  height: 30px;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+  border: thin #80808038 solid;
+  padding: 0 0 0 10px
+}
